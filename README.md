@@ -313,7 +313,7 @@ See [`docs/remediation.md`](docs/remediation.md). Short version:
 - CERT-EU SA 2026-018 — php2shell
 - PHP advisory 2026-10-21 — CVE-2026-109618 / CVE-2026-109619
 - PMB (PhpMyBibli) — open-source library management system
-- `pocket_poc.py` — Karim BOUDRA @ ULTRADEFENSE LAB
+- `pocket_poc.py` — vendored chain engine
 
 ---
 

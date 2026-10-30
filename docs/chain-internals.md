@@ -3,7 +3,7 @@
 This is the technical detail behind stage 7. It explains what the gadget does, why it works,
 and exactly where it stops on PHP 7.4.
 
-> Source: `poc/pocket_poc.py` — Karim BOUDRA @ ULTRADEFENSE LAB.
+> Source: `poc/pocket_poc.py` (vendored).
 > CVE-2026-109619 is the underlying primitive (stale request-owned global state).
 
 ---

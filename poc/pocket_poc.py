@@ -7,12 +7,10 @@
 """
 PHP 8.x unserialize UAF -> RCE (remote, against remote_app.php).
 
- Karim BOUDRA @ ULTRADEFENSE LAB
  Full chain: heap -> ELF -> EG -> system() -> RCE
  Target: https://example.com/pmb/remote_app.php
 
 Thanks: Calif (MAD Bugs, PoC C. public), Nicolas Grekas (GH-23981, branche E:)
-Greetings: CYBERSEC TEAM / ULTRADEFENSE TEAM
 
 
 Chain
@@ -65,7 +63,7 @@ req_count = 0
 
 
 # ---------------------------------------------------------------------------
-# Multi-green ANSI palette + BIG pixeled banner - Karim BOUDRA @ ULTRADEFENSE LAB
+# Multi-green ANSI palette + BIG pixeled banner
 #
 
 USE_COLOR = sys.stdout.isatty()
@@ -138,19 +136,16 @@ def print_banner(scheme, host, port, path):
         for row in pixel_art(word, sx=1, sy=1):
             print(g(center(row), shade, bold))
         print()
-    print(g(center('Karim BOUDRA @ ULTRADEFENSE LAB'), 'sig', True))
     print(g(center('Full chain: heap -> ELF -> EG -> system() -> RCE'), 'soft'))
     print(g(center(f'Target: {scheme}://{host}:{port}{path}'), 'soft'))
     print()
     print(g(center('Thanks: Calif (MAD Bugs, PoC C. public), Nicolas Grekas (GH-23981, branche E:)'), 'soft'))
-    print(g(center('Greetings: CYBERSEC TEAM / ULTRADEFENSE TEAM'), 'sig', True))
     print(bar)
 
 
 def print_footer():
     """End-of-run signature shown right after the live results."""
     print(f"\n[*] Total requests: {req_count}")
-    print(g('Karim BOUDRA @ ULTRADEFENSE LAB', 'neon'))
 
 
 # ---------------------------------------------------------------------------
